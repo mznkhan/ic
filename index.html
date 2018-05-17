@@ -13,42 +13,88 @@
   <link href='https://fonts.googleapis.com/css?family=Tillana' rel='stylesheet'>
   <link rel="stylesheet" href="styles/main.css">
 
+  <script>
+
+  // get the value of the bottom of the #main element by adding the offset of that element plus its height, set it as a variable
+//var mainbottom = $('#main').offset().top + $('#main').height();
+
+// on scroll, 
+$(window).scroll(function () {
+    var $heightScrolled = $(window).scrollTop();
+    var $defaultHeight = 10;
+	console.log($heightScrolled);
+    if ( $heightScrolled < $defaultHeight )
+    {
+        $('.fixed-top').removeClass("b")
+		$('.fixed-top').addClass("a")
+		console.log("a class added");
+	}
+    else {
+        $('.fixed-top').addClass("b")
+		console.log("b class added");
+    }
+});
+
+
+</script>
+
 </head>
 <body>
+<!-- Navbar Start Here -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark flex-row fixed-top">
+        <a class="navbar-brand mr-auto" href="/">
+            <img src="https:////placehold.it/120x29?text=Logo" class="img-fluid" alt="Responsive image">
+        </a>
+        <ul class="navbar-nav flex-row mr-lg-0">
+ 
+            <li class="nav-item">
+                <a class="nav-link pr-2 float-right"><i class="fa fa-facebook"></i></a>
+            </li>
+   
+        </ul>
+        <button class="navbar-toggler ml-lg-0 order-first" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
 
-
-	<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top " style="margin: auto;">
-		<a class="navbar-brand" href="#">
-		<img src="images/logo.jpg" alt="Logo" style="width:40px;">
-			Ibrahimi</a>
-		<button class="navbar-toggler order-first" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-			Cart<i class="fa fa-shopping-cart fa"></i>
-		</button>
-		<div class="collapse navbar-collapse" id="collapsibleNavbar">
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active">
-					<a class="nav-link" href="#">Menu</a></a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Recipes</a>
-				</li>
-			  <li class="nav-item">
-				<a class="nav-link" href="#">Contact Us</a>
-			  </li>    
-			</ul>
-			<ul class="nav navbar-nav navbar-right ml-auto">
-				<li>
-					<a href='#' data-toggle="tooltip" data-placement="left" title="Tooltip on right">Cart<i class="fa fa-shopping-cart fa"></i></a>
-				</li>
-			</ul>	
-		</div>  
-	</nav>
-<div class="content">
-	<h2 class="red-text text-center p-1">your text</h2>
-	<hr>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="//codeply.com/go/cxXqBnGrPx">Codeply</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+            </ul>
+			        <ul class="navbar-nav flex-row mr-lg-0">
+ 
+            <li class="nav-item">
+                <a class="nav-link pr-2 float-right"><i class="fa fa-facebook"></i></a>
+            </li>
+   
+        </ul>
+            <form class="form-inline my-2 my-lg-0">
+                
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+<!-- Main Content -->
+	<div class="content" id="main" >
+		<h2 class="red-text text-center p-1">your text</h2>
+		<hr>
 	<div class="row justify-content-center">
 
 		<div class="card" style="width: 18rem;">

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Kaushan Script' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Aguafina Script' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Bad Script' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Tillana' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Alex Brush' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+  <link rel="stylesheet" href="styles/main.css">
+
+  <script>
+
+  // get the value of the bottom of the #main element by adding the offset of that element plus its height, set it as a variable
+//var mainbottom = $('#main').offset().top + $('#main').height();
+
+// on scroll, 
+$(window).scroll(function () {
+    var $heightScrolled = $(window).scrollTop();
+    var $defaultHeight = 10;
+	console.log($heightScrolled);
+    if ( $heightScrolled < $defaultHeight )
+    {
+        $('.fixed-top').removeClass("b")
+		$('.fixed-top').addClass("a")
+		console.log("a class added");
+	}
+    else {
+        $('.fixed-top').addClass("b")
+		console.log("b class added");
+    }
+});
+
+
+</script>
+
+</head>
+<body>
+<!-- Navbar Start Here -->
+	<nav class="navbar navbar-expand-md fixed-top navbar-custom " id="mynav" style="margin: auto;">
+		<a class="navbar-brand" href="#">
+		<!--<img src="images/logo.jpg" alt="Logo" style="width:60px;">-->
+			IBRAHIMI</a>
+		<button class="navbar-toggler order-first custom-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+		<!--	<span class="navbar-toggler-icon"></span> -->
+		<i class="fa fa-navicon" style="font-size:36px;color:white;"></i>
+		</button>
+		<button class="navbar-toggler btn shop-btn p-2" type="button" data-toggle="collapse" data-target="#">
+			Cart<i class="fa fa-shopping-cart fa"></i>
+		</button>
+		<div class="collapse navbar-collapse" id="collapsibleNavbar">
+			<ul class="navbar-nav mr-auto" >
+				<li class="nav-item active" >
+					<a class="nav-link" href="#">Menu</a></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Recipes</a>
+				</li>
+			  <li class="nav-item">
+				<a class="nav-link" href="#">Contact Us</a>
+			  </li>    
+			</ul>
+			
+			<div class="hidden-xs collapse navbar-collapse navbar-left">
+			<ul class="navbar-nav navbar-right ml-auto shop-cart">
+				<li>
+					<button class="btn shop-btn" type="button"  >
+						Cart<i class="fa fa-shopping-cart fa"></i>
+					</button>
+				</li>
+			</ul> 
+			</div>			
+			</div>  
+		
+	</nav>
+<!-- Main Content -->
+	<div class="content" id="main" >
+	
+		<div class="container-fluid sec-header">
+		<h4 class="text-center pt-4">Main Dishes</h4>
+		</div>
+		
+		<div class="row justify-content-center">
+
+		<div class="card" style="width: 18rem;">
+			<img class="card-img-top" src="images/food-3356314_1920.jpg" alt="Card image cap">
+			<div class="card-body">
+				<h6 class="card-title">Chicken Biryani</h6>
+				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+			</div>
+			<div class="card-footer clearfix">
+				<span class="label">$35.99 per kg</span>
+				<a href="#" class="card-link cart-btn float-right card-shop-btn" data-toggle="tooltip" data-placement="left" title="Min Order 2Kg"">Cart <i class="fa fa-shopping-cart fa"></i></a>
+			</div>
+		</div>
+		
+		<div class="card" style="width: 18rem;">
+			<img class="card-img-top" src="images/food-3356314_1920.jpg" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title">Chicken Biryani</h5>
+				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+			</div>
+			<div class="card-footer clearfix">
+				<span class="label">$35.99 per kg</span>
+				<a href="#" class="card-link cart-btn float-right card-shop-btn" data-toggle="tooltip" data-placement="left" title="Min Order 2Kg">Cart <i class="fa fa-shopping-cart fa"></i></a>
+			</div>
+		</div>
+		
+				<div class="card" style="width: 18rem;">
+			<img class="card-img-top" src="images/food-3356314_1920.jpg" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title">Chicken Biryani</h5>
+				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+			</div>
+			<div class="card-footer clearfix">
+				<span class="label">$35.99 per kg</span>
+				<a href="#" class="card-link cart-btn float-right card-shop-btn" data-toggle="tooltip" data-placement="left" title="Min Order 2Kg">Cart <i class="fa fa-shopping-cart fa"></i></a>
+			</div>
+		</div>
+		
+		<div class="card" style="width: 18rem;">
+			<img class="card-img-top" src="images/food-3356314_1920.jpg" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title">Chicken Biryani</h5>
+				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+			</div>
+			<div class="card-footer clearfix">
+				<span class="label">$35.99 per kg</span>
+				<a href="#" class="card-link cart-btn float-right card-shop-btn" data-toggle="tooltip" data-placement="left" title="Min Order 2Kg">Cart <i class="fa fa-shopping-cart fa"></i></a>
+			</div>
+		</div>
+		
+		<div class="card" style="width: 18rem;">
+			<img class="card-img-top" src="images/food-3356314_1920.jpg" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title">Chicken Biryani</h5>
+				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+			</div>
+			<div class="card-footer clearfix">
+				<span class="label">$35.99 per kg</span>
+				<a href="#" class="card-link cart-btn float-right card-shop-btn" data-toggle="tooltip" data-placement="left" title="Min Order 2Kg">Cart <i class="fa fa-shopping-cart fa"></i></a>
+			</div>
+		</div>
+
+		
+	</div>
+<!-- Row 2 -->
+	<div class="container-fluid sec-header row-02">
+		<h4 class="text-center">Main Dishes</h4>
+	</div>
+	
+		<div class="row justify-content-center">
+
+		<div class="card" style="width: 18rem;">
+			<img class="card-img-top" src="images/food-3356314_1920.jpg" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title">Chicken Biryani</h5>
+				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+			</div>
+			<div class="card-footer clearfix">
+				<span class="label">$35.99 per kg</span>
+				<a href="#" class="card-link cart-btn float-right card-shop-btn" data-toggle="tooltip" data-placement="left" title="Min Order 2Kg"">Cart <i class="fa fa-shopping-cart fa"></i></a>
+			</div>
+		</div>
+		
+		<div class="card" style="width: 18rem;">
+			<img class="card-img-top" src="images/food-3356314_1920.jpg" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title">Chicken Biryani</h5>
+				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+			</div>
+			<div class="card-footer clearfix">
+				<span class="label">$35.99 per kg</span>
+				<a href="#" class="card-link cart-btn float-right card-shop-btn" data-toggle="tooltip" data-placement="left" title="Min Order 2Kg">Cart <i class="fa fa-shopping-cart fa"></i></a>
+			</div>
+		</div>
+		
+				<div class="card" style="width: 18rem;">
+			<img class="card-img-top" src="images/food-3356314_1920.jpg" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title">Chicken Biryani</h5>
+				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+			</div>
+			<div class="card-footer clearfix">
+				<span class="label">$35.99 per kg</span>
+				<a href="#" class="card-link cart-btn float-right card-shop-btn" data-toggle="tooltip" data-placement="left" title="Min Order 2Kg">Cart <i class="fa fa-shopping-cart fa"></i></a>
+			</div>
+		</div>
+		
+		<div class="card" style="width: 18rem;">
+			<img class="card-img-top" src="images/food-3356314_1920.jpg" alt="Card image cap">
+			<div class="card-body">
+				<h6 class="card-title">Chicken Biryani</h6>
+				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+			</div>
+			<div class="card-footer clearfix">
+				<span class="label">$35.99 per kg</span>
+				<a href="#" class="card-link cart-btn float-right card-shop-btn" data-toggle="tooltip" data-placement="left" title="Min Order 2Kg">Cart <i class="fa fa-shopping-cart fa"></i></a>
+			</div>
+		</div>
+		
+		<div class="card" style="width: 18rem;">
+			<img class="card-img-top" src="images/food-3356314_1920.jpg" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title">Chicken Biryani</h5>
+				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+			</div>
+			<div class="card-footer clearfix">
+				<span class="label">$35.99 per kg</span>
+				<a href="#" class="card-link cart-btn float-right card-shop-btn" data-toggle="tooltip" data-placement="left" title="Min Order 2Kg">Cart <i class="fa fa-shopping-cart fa"></i></a>
+			</div>
+		</div>
+
+		
+	</div>
+</div>
+<script>
+$('[data-toggle="tooltip"]').tooltip()
+</script>
+</body>
+</html>
